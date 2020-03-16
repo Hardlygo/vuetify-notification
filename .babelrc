@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "safari": "10",
+          "browsers": [
+            "> 3%",
+            "last 5 versions",
+            "not ie <= 8"
+          ]
+        },
+        "useBuiltIns": true,
+        "debug": true
+      }
+    ],
+    "stage-0"
+  ],
+  "plugins": [ ]
+}

@@ -1,7 +1,7 @@
 <!--
  * @Author: PENGZY
  * @since: 2020-03-16 09:44:57
- * @lastTime: 2020-03-16 16:51:36
+ * @lastTime: 2020-03-16 21:15:16
  * @LastAuthor: Do not edit
  * @moto: Be Curious!
  * @message: 
@@ -63,24 +63,24 @@ export default {
   },
   methods: {
     showDialog() {
-      this.$vn.MDialog.show({
-        title: "我的dialog",
-        titleIcon: "mdi-close",
-        iconColor: "red",
-        message: "你好666666666666",
-        titleBarColor: "red",
-        cancelText: "关闭",
-        onCancel() {
-          console.log(1); // 非当前 vm
-        },
-        onConfirm() {
-          console.log(2);
-        }
-      });
+      // this.$vn.MDialog.show({
+      //   title: "我的dialog",
+      //   titleIcon: "mdi-close",
+      //   iconColor: "red",
+      //   message: "你好666666666666",
+      //   titleBarColor: "red",
+      //   cancelText: "关闭",
+      //   onCancel() {
+      //     console.log(1); // 非当前 vm
+      //   },
+      //   onConfirm() {
+      //     console.log(2);
+      //   }
+      // });
 
-      // this.$vn.MSnackbar.show({
-      //   text: 'hello'
-      // })
+      this.$vn.MSnackbar.show({
+        text: 'hello'
+      })
     }
   }
 };

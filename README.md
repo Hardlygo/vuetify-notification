@@ -3,9 +3,8 @@
 ```vuetify-notification```是基于vuetify2.0 以及mdi字体封装的一个提示提醒组件，目的在于在项目中以最简便的编程式调用。(打包后仅有10k，欢迎使用vuetifyUI的朋友们使用，如若发现bug也欢迎指正，谢谢，多多star喔~)
  
 ##### 食用步骤</br>
-0.众所周知，当我们自定义组件时需要自己封装还有在其他每个调用到的其他组件中引入，还要在template中标明标签，在这里使用到了编程式的思想，只需要在全局main.js里面引入一次即可全局在有vue实例的地方用简短的js实现调用，一劳永逸，你可以在一些比如需要提示的地方或者请求返回的地方调用。
-1. 
-```npm i -s vuetify-notification@latest```
+0. 众所周知，当我们自定义组件时需要自己封装还有在其他每个调用到的其他组件中引入，还要在template中标明标签，在这里使用到了编程式的思想，只需要在全局main.js里面引入一次即可全局在有vue实例的地方用简短的js实现调用，一劳永逸，你可以在一些比如需要提示的地方或者请求返回的地方调用。
+1. ```npm i -s vuetify-notification@latest```
 
 2. 在项目的main.js中引入（目前该库提供了两个组件，diaolog与snackbar且都是基于vuetify编写，故当你需要自定义一些类如文字大写颜色等请参考vuetify的官网）
 ```javascript {highlight=20}

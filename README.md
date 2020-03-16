@@ -40,8 +40,8 @@ Vue.use(MSnackBarPlugin, {
 //关闭(可以主动调用也可以根据dialog内的确定或取消按钮关闭)
 this.$vn.MDialog.hide()
 ~~~
-![](https://github.com/Hardlygo/vuetify-notification/blob/master/public/images/dialog.png?raw=true)
-```show```函数的入参对象相关属性方法如下：</br>
+![](https://github.com/Hardlygo/vuetify-notification/blob/master/public/images/dialog.png?raw=true)  
+ ```show``` 函数的入参对象相关属性方法如下：</br>
 
 属性|默认值|类型|描述
 ----|-----|----|----|
@@ -66,7 +66,7 @@ cancelText|取消|String|取消按钮的文字
 					text: 'hello'
 				})
 ~~~
-![](https://github.com/Hardlygo/vuetify-notification/blob/master/public/images/snackbar.png?raw=true)
+![](https://github.com/Hardlygo/vuetify-notification/blob/master/public/images/snackbar.png?raw=true)  
 show方法的配置对象的属性如下：
 属性|默认值|类型|描述
 ----|-----|----|----|

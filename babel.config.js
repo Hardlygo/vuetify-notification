@@ -1,7 +1,7 @@
 /*
  * @Author: PENGZY
  * @since: 2020-03-29 02:02:47
- * @lastTime: 2020-03-29 16:54:37
+ * @lastTime: 2020-03-29 17:22:49
  * @LastAuthor: Do not edit
  * @FilePath: \rx-guilind:\workspace\JS\vuetify-notification\babel.config.js
  * @moto: Be Curious!
@@ -49,14 +49,14 @@ if (process.env["NODE_ENV"] === "development") {
         "@babel/plugin-transform-runtime",
         {
           "absoluteRuntime": false,
-          "corejs": {
-            "version": 2,
-            "proposals": false
-          },
+        //   "corejs": {//这会加大编译后的体积
+        //     "version": 2,
+        //     "proposals": false
+        //   },
           "helpers": true,
           "regenerator": true,
           "useESModules": false,
-          "version": "^7.9.2",
+        //   "version": "^7.9.2",
           "debug": true
         }
       ]

@@ -1,10 +1,19 @@
+/*
+ * @Author: PENGZY
+ * @since: 2020-03-16 09:41:26
+ * @lastTime: 2020-03-28 23:35:55
+ * @LastAuthor: Do not edit
+ * @文件相对于项目的路径: \rx-guilind:\workspace\JS\vuetify-notification\webpack.prod.js
+ * @moto: Be Curious!
+ * @message: 
+ */
 const merge = require('webpack-merge');
 var webpack = require('webpack');
 const common = require('./webpack.common');
 module.exports = merge(common, {
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       loader: 'babel-loader',
     }, ]
   },

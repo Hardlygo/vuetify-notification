@@ -53,6 +53,8 @@ showConfirm|true|Boolean|
 showCancel|true| Boolean|   
 titleBarColor|light-blue|String|
 iconColor|blue|String|
+minWidth|400|String or Number|控制dialog的最小宽度
+maxWidth|400|String or Number|控制dialog的最大宽度
 onConfirm|undefined|function|点击确定后的回调方法|
 onCancel|undefined|function|点击取消后的回调方法|   
 comfirmText|确定|String|确定按钮的文字

@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-dialog v-model="showValue" persistent :mini-width="minWidth" :max-width="maxWidth">
-      <v-card color="primary" v-if="type==='loading'">
-        <v-card-text class="py-2">
+      <v-card :color="titleBarColor?titleBarColor:'light-blue'" v-if="type==='loading'">
+        <v-card-text class="py-2 white--text px-1">
           {{message}}
-          <v-progress-linear indeterminate color="white" class="mb-0"></v-progress-linear>
+          <v-progress-linear indeterminate color="white" class="mb-1"></v-progress-linear>
         </v-card-text>
       </v-card>
       <v-card v-if="type==='confirm'">

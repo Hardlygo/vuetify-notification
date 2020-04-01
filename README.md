@@ -41,11 +41,25 @@ Vue.use(MSnackBarPlugin, {
 this.$vn.MDialog.hide()
 ~~~
 ![](https://github.com/Hardlygo/vuetify-notification/blob/master/public/images/dialog.png?raw=true)  
+
+```loading```
+~~~javascript
+	//打开
+      this.$vn.MDialog.show({
+        type:'loading',
+        message: "数据加载中...",
+        titleBarColor: "red",
+	  });
+	  
+	  //关闭
+	  this.$vn.MDialog.hide()
+~~~
+![](https://github.com/Hardlygo/vuetify-notification/blob/master/public/images/loading.png?raw=true)
  ```show``` 函数的入参对象相关属性方法如下：</br>
 
 属性|默认值|类型|描述
 ----|-----|----|----|
-type|confirm|String|
+type|confirm|String|notification类型是确认提示框(comfirm)还是加载条(loading)
 message||String|    
 title||String|
 titleIcon||String|

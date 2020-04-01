@@ -54,7 +54,8 @@ this.$vn.MDialog.hide()
 	  //关闭
 	  this.$vn.MDialog.hide()
 ~~~
-![](https://github.com/Hardlygo/vuetify-notification/blob/master/public/images/loading.png?raw=true)
+![](https://github.com/Hardlygo/vuetify-notification/blob/master/public/images/loading.png?raw=true) 
+
  ```show``` 函数的入参对象相关属性方法如下：</br>
 
 属性|默认值|类型|描述

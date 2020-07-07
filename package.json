@@ -1,7 +1,7 @@
 {
   "name": "vuetify-notification",
   "description": "notification component base on vuetify2.0",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "今天星期五 Hardlygo",
   "license": "ISC",
   "main": "dist/vuetify-notification.js",

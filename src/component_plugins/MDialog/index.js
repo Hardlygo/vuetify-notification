@@ -4,12 +4,10 @@
  * @lastTime: 2020-03-16 11:15:34
  * @LastAuthor: Do not edit
  * @moto: Be Curious!
- * @message: 
+ * @message:
  */
-import component from '../../components/MDialog.vue';
-import {
-  mergeOptions
-} from '../../libs/plugin_helper'
+import component from "../../components/MDialog.vue";
+import { mergeOptions } from "../../libs/plugin_helper";
 
 let $vm;
 
@@ -22,64 +20,76 @@ const plugin = {
     if (!$vm) {
       $vm = new MDialog({
         // el: document.createElement('div'),
-        vuetify:option.vuetify||{},
+        vuetify: option.vuetify || {},
         propsData: {
-          message: '',
-          title: '',
-          titleIcon: 'error',
+          message: "",
+          title: "",
+          titleIcon: "error"
         }
       });
     }
 
     const mdialog = {
       show(options) {
-        if (typeof options === 'object') {
+        if (typeof options === "object") {
           mergeOptions($vm, options);
         }
-        if (typeof options === 'object' && (options.onShow || options.onHide)) {
+        if (typeof options === "object" && (options.onShow || options.onHide)) {
           options.onShow && options.onShow();
         }
-        //先调用组件原本的监听
+        //先取消组件原本的showValue的监听
         this.$watcher && this.$watcher();
-        this.$watcher = $vm.$watch('showValue', (val) => {
+
+        this.$watcher = $vm.$watch("showValue", val => {
           if (!val && options && options.onHide) {
             options.onHide();
           }
-        })
-        //取消原组件的监听事件  
-        $vm.$off('on-cancel');
-        $vm.$off('on-confirm');
+        });
+        $vm.$off("on-show");
+        $vm.$off("on-hide");
+
+        $vm.$on("on-show", () => {
+          options && options.onShow && options.onShow();
+        });
+
+        $vm.$on("on-hide", () => {
+          options && options.onHide && options.onHide();
+        });
+
+        //取消原组件的监听事件
+        $vm.$off("on-cancel");
+        $vm.$off("on-confirm");
         //重新注册
-        $vm.$on('on-cancel', () => {
+        $vm.$on("on-cancel", () => {
           $vm.showValue = false;
           options && options.onCancel && options.onCancel();
-        })
-        $vm.$on('on-confirm', () => {
+        });
+        $vm.$on("on-confirm", () => {
           $vm.showValue = false;
           options && options.onConfirm && options.onConfirm();
-        })
-        $vm.showValue = true
+        });
+        $vm.showValue = true;
       },
       hide() {
         $vm.showValue = false;
       },
       isVisible() {
-        return $vm.showValue
+        return $vm.showValue;
       }
-    }
+    };
 
     // all vn's plugins are included in this.$vn
     if (!vue.$vn) {
       vue.$vn = {
         MDialog: mdialog
-      }
+      };
     } else {
       vue.$vn.MDialog = mdialog;
     }
 
     vue.mixin({
-      created: function () {
-        this.$vn = vue.$vn
+      created: function() {
+        this.$vn = vue.$vn;
       },
       mounted() {
         //渲染完毕再添加到文档流
@@ -88,9 +98,8 @@ const plugin = {
         var component = $vm.$mount();
         document.querySelector("#app").appendChild(component.$el);
       }
-    })
-
+    });
   }
-}
-export default plugin
-export const install = plugin.install
+};
+export default plugin;
+export const install = plugin.install;

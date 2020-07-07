@@ -63,26 +63,26 @@ export default {
   },
   methods: {
     showDialog() {
-      // this.$vn.MDialog.show({
-      //   title: "我的dialog",
-      //   titleIcon: "mdi-close",
-      //   iconColor: "red",
-      //   message: "你好66666666出错了未能校验身份嘻嘻嘻",
-      //   titleBarColor: "red",
-      //   cancelText: "关闭",
-      //   onCancel() {
-      //     console.log(1); // 非当前 vm
-      //   },
-      //   onConfirm() {
-      //     console.log(2);
-      //   }
-      // });
-
       this.$vn.MDialog.show({
-        type:'loading',
-        message: "数据加载中...",
+        title: "我的dialog",
+        titleIcon: "mdi-close",
+        iconColor: "red",
+        message: "你好66666666出错了未能校验身份嘻嘻嘻",
         titleBarColor: "red",
+        cancelText: "关闭",
+        onCancel() {
+          console.log(1); // 非当前 vm
+        },
+        onConfirm() {
+          console.log(2);
+        }
       });
+
+      // this.$vn.MDialog.show({
+      //   type:'loading',
+      //   message: "数据加载中...",
+      //   titleBarColor: "red",
+      // });
 
       // this.$vn.MSnackbar.show({
       //   text: 'hello'

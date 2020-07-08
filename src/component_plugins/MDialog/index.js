@@ -39,7 +39,7 @@ const plugin = {
         }
         //先取消组件原本的showValue的监听
         this.$watcher && this.$watcher();
-
+        //监听函数返回值是取消监听函数
         this.$watcher = $vm.$watch("showValue", val => {
           if (!val && options && options.onHide) {
             options.onHide();
